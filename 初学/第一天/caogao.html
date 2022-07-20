@@ -15,14 +15,14 @@
     <button class="pink">按钮</button>
     <button>按钮</button>
     <button>按钮</button>
-    <button>按钮</button>
-    <div>aaa</div>
-
     <script>
-        let btns = document.querySelectorAll('button')
+          //mouserover鼠标放上去就会发生相应使事件
+          //var x = document.querySelectorAll(".example");获取文档中class="example"的所有元素:
+        let btns = document.querySelectorAll('button')//获取文档中button的所有元素:btns则是一个数组
         for (let i=0;i<btns.length;i++){
+              //addEventListener() 方法用于向指定元素添加事件句柄。
             btns[i].addEventListener('click',function(){
-                document.querySelector('.pink').className=''
+                document.querySelector('.pink').className=''//querySelector()方法返回文档中匹配指定CSS选择器的一个元素
                 this.className='pink'
             })
         }
