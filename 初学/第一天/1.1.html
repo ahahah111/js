@@ -9,6 +9,9 @@
         .pink{
             background-color:pink ;
         }
+        span{
+            color: aquamarine;
+        }
     </style>
 </head>
 <body>
@@ -16,6 +19,7 @@
     <button>按钮</button>
     <button>按钮</button>
     <script>
+    //1、很重要
           //mouserover鼠标放上去就会发生相应使事件
           //var x = document.querySelectorAll(".example");获取文档中class="example"的所有元素:
         let btns = document.querySelectorAll('button')//获取文档中button的所有元素:btns则是一个数组
@@ -26,6 +30,65 @@
                 this.className='pink'
             })
         }
+    
+    // 2、输出语句（3种）
+        // 1、
+        // document.write("hello")
+        // document.write("<h1>hello<h1>")
+        // 2.
+        // alert("hh")
+        // 3、//控制台输出，给程序员看的，即在浏览器进入检查，选择console(控制台)才可以看到
+        // console.log('yesyes')
+
+
+    //3、 输入语句
+        // prompt('请输入你的姓名')//显示一个对话框
+
+        // let变量：计算机中存储数据的地方，相当于一个空间
+        // let a= 12
+        // let b= '你好'
+
+    //4、 字符串模板拼接（使用``反引号）
+        let age=19,name='uuu'
+        document.write(`<br>大家好，我叫<span>${name}</span>，
+        今年${age}岁了！<br>
+        `)
+
+
+    // 5、未定义类型（undefined）
+    // 什么时候出现undefined类型？
+    //    只声明不赋值时，变量的默认值为undefined,一般很少【直接】为某个变量赋值为undefined
+    // 工作中的使用场景：我们开发中经常声明一个变量，等待用户传送过来数据。如果我们通过检测该变量是undefined,就可以判断用户没有数据传递过来
+
+
+    // 6、null空
+    // 官方解释：把null作为尚未创建的对象；大白话：将来有个对象里面存放的是一个对象，但是对象现在还没有创建好，可以先给个null
+    // null与undefined的区别：
+    //    undefined表示没有赋值，null赋值了，但是内容为空
+
+    //7、检测数据类型（隐式转换：转换类型不明确，靠经验解决）
+    let num = 10
+    // console.log(typeof num)//输出string类型，因为console.log()会将数字18转化为字符串‘18’
+    // console.log(typeof (num - '10'))//输出number
+    // console.log(typeof num - '10')//输出Nan，not a number
+    // console.log(typeof num +'11')//先输出typeof num的类型，再紧跟着输出‘11’这两个字符串
+    // console.log(typeof (num +'11'))//计算typeof 21的类型
+    //     //！！! +号作为正号解析可以转换为number，例如：+'11'表示数值10， -'11'表示数值-10
+    // console.log(typeof (num + +'11'))//输出number/
+        
+    //     //  ！！！！
+    // console.log(num + '10')//输出1010
+    // console.log(num - '10')//输出0！！！！因为- * / 会把字符串的10转化为数字10
+
+    // console.log(parseInt('10.999999'))//输出10，parseInt表示将其转换成数字型的整数
+    // onsole.log(parseFloat('10.999999'))//输出10.999999，parseFloat表示将其转换成数字型的浮点数
+
+    console.log(Number('10.01abc'))//输出NaN
+    console.log(parseFloat('10.01hh10qq'))//输出10.01,hh10qq自动过滤
+    console.log(parseFloat('abc10.01abc'))//输出NaN,只能过滤出数字+字符串
+      //parseFloat经常用于过滤
+
+
     </script>
 </body>
 </html>
