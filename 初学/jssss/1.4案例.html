@@ -9,56 +9,56 @@
 <body>
     <script>
     //1.判断一个数是4的倍数，且不是100的倍数
-        // let num = prompt('请输入一个数')
-        // num = num || 0
-        // console.log(num%4==0 && num%100 !== 0);
+        let num = prompt('请输入一个数')
+        num = num || 0
+        console.log(num%4==0 && num%100 !== 0);
 
 
     //2.简易ATM取款机案例,输入4就退出
-        // let money = 100
-        // while(true){
-        //     let str = prompt(`请你选择操作：
-        //         1、存钱
-        //         2、取钱
-        //         3、查看余额
-        //         4、退出
-        //     `)
-        //     if(str ==='4')
-        //         break
-        //     switch(str){
-        //         case '1':
-        //             let cun = +prompt('请输入存钱的金额：')
-        //             money += cun
-        //             break
-        //         case '2':
-        //             let qu = +prompt('请输入取钱的金额：')
-        //             money -= qu
-        //             break
-        //         case '3':
-        //             alert(`您卡上的余额是${money}元`)
-        //             break
-        //     }
-        // }
+        let money = 100
+        while(true){
+            let str = prompt(`请你选择操作：
+                1、存钱
+                2、取钱
+                3、查看余额
+                4、退出
+            `)
+            if(str ==='4')
+                break
+            switch(str){
+                case '1':
+                    let cun = +prompt('请输入存钱的金额：')
+                    money += cun
+                    break
+                case '2':
+                    let qu = +prompt('请输入取钱的金额：')
+                    money -= qu
+                    break
+                case '3':
+                    alert(`您卡上的余额是${money}元`)
+                    break
+            }
+        }
 
     //3、根据输入的数据生成柱形图
-        // 用户输入四次，并把这四个数字放到一个数组里；
-        // 遍历改数组，根据数据生成4个柱状图，柱状图就是div盒子，宽度固定，高度就是输入的数字
-        //并没有写样式
-        // let arr = []
-        // for(let i=1;i<=4;i++){
-        //     // arr.push('123'), 123==prompt(`请输入第${i}季度的数据`
-        //     arr.push(prompt(`请输入第${i}季度的数据`))
-        // }
-        // document.write(`<div class="box">`)//因为循环不能放入单反号中
-        // for(let i=0;i<4;i++){
-        //     document.write(`
-        //         <div style="height: ${arr[i]}px;">
-        //             <span>${arr[i]}</span>
-        //             <h4>第${i+1}季度</h4>
-        //         </div>
-        //     `)
-        // }
-        // document.write(`</div>`)
+        用户输入四次，并把这四个数字放到一个数组里；
+        遍历改数组，根据数据生成4个柱状图，柱状图就是div盒子，宽度固定，高度就是输入的数字
+        并没有写样式
+        let arr = []
+        for(let i=1;i<=4;i++){
+            // arr.push('123'), 123==prompt(`请输入第${i}季度的数据`
+            arr.push(prompt(`请输入第${i}季度的数据`))
+        }
+        document.write(`<div class="box">`)//因为循环不能放入单反号中
+        for(let i=0;i<4;i++){
+            document.write(`
+                <div style="height: ${arr[i]}px;">
+                    <span>${arr[i]}</span>
+                    <h4>第${i+1}季度</h4>
+                </div>
+            `)
+        }
+        document.write(`</div>`)
 
     // 4.学生信息表
         let student =[
