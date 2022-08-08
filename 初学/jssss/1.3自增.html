@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // 1、
+        let i = 1
+        console.log(i++ + ++i + i);//结果是1+3+3=7
+        //i++,先运算再自增，此时i=1，即1+ ++i +i,此时i++完成了运算，则i=2
+        //++i,先自增再运算，此时i=i+1=3,此时自增完成，则1+3+i
+        //最终，i=3,则1+3+3=7
+
+    // 2、
+        console.log(3 > '2');//true！！因为会自动进行隐式转换
+        // console.log(5 = 5);//!!!!!注意！！报错！！！因为=是赋值符号
+        console.log(5 == '5');//true！！！,因为==只要数值相等，不管数据类型
+         //开发常用===！！！！！！===要求值和类型都一样
+        console.log(5===5);//true
+        console.log(5=='5');//flase
+    </script>
+
+</body>
+</html>
