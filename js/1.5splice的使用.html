@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = ['red','green']
+        // 1、删除 数组.splice(起始位置，删除个数)
+        // arr.splice(1,1) //['red']
+        // console.log(arr);//splice 修改原来的数组
+        // 2、添加 数组.splice(起始位置，删除个数，添加的元素)
+        // 把pink添加到red和green之间
+        // 起始位置就是  要放到的索引位置
+        arr.splice(1,0,'pink','hhhh')
+        console.log(arr);//['red','pink','hhhh','green']
+    </script>
+</body>
+</html>

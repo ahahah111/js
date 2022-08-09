@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // 1、先使用const声明变量，如果后续发现变量发生改变，再改用let
+        // 数组和对象尽量使用const
+        const arr = ['red','pink']
+        arr.push('blue')///可以，因为arr数组里面存放的地址是没有发生改变的，可以用const
+        arr = [1,2,3]//不行！因为arr存放的地址发生了改变
+        console.log(arr);
+
+
+    </script>
+</body>
+</html>
